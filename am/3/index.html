@@ -130,10 +130,13 @@ var translations = {
 
 
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-armenia/assets/css/style.css?v=20220324172427">
+        <link rel="stylesheet" href="/sdg-site-armenia/assets/css/style.css?v=20220324175816">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -148,145 +151,65 @@ var translations = {
 
     </head>
 <body class="language-hy
-layout-goal-with-progress
+layout-goal-bootstrap5
 ">
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Ալֆա","default_contrast":"լռելյայն հակադրություն","disable_high_contrast":"Անջատեք բարձր հակադրություն","disclaimer":"Սա մշակման վեբ կայք է: Մենք ողջունում ենք ձեր <a href=\"mailto:%email_address\"> հետադարձ կապը","enable_high_contrast":"Միացնել բարձր հակադրություն","high_contrast":"բարձր հակադրություն","skip_link":"Անցեք հիմնական բովանդակությանը","tag_line":"17 նպատակներ մեր աշխարհը փոխակերպելու համար","toggle_menu":"Ընտրացանկի փոխարկում Կտտացրեք ընտրացանկը ընդլայնելու կամ փլուզելու համար:","toggle_search":"Որոնման փոփոխություն: Սեղմեք ՝ որոնման տողն ընդլայնելու կամ փլուզելու համար:"};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Անցեք հիմնական բովանդակությանը</a>
+<a class="visually-hidden-focusable" id="skiplink" href="#main-content" tabindex="0">Անցեք հիմնական բովանդակությանը</a>
 <div id="disclaimer">
-  <div class="container">
+    
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Ալֆա</strong>
     
     Սա մշակման վեբ կայք է: Մենք ողջունում ենք ձեր <a href="mailto:test@example.com"> հետադարձ կապը
+    
   </div>
 </div>
 
 </div>
 
-<header role="banner" class="header-menu-left-aligned">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-site-armenia/am/" id="home">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/sdg-site-armenia/am/" id="home">
     <img src="/sdg-site-armenia/assets/img/SDG_logo.png" alt="Կայուն զարգացման նպատակներ - 17 նպատակներ մեր աշխարհը փոխակերպելու համար" />
 </a>
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Միացնել բարձր հակադրություն"
-           aria-label="Միացնել բարձր հակադրություն"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">ՀԱՅԵՐԵՆ</span>
-      <span class="language-abbreviation">hy</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/sdg-site-armenia/3/">
-              English
-            </a>
-          </li><li class="language-option-ru">
-            <a href="/sdg-site-armenia/ru/3/">
-              Pусский
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
-    </div>
-
-    <div class="search-and-desktop-widgets">
-      <div id="search" class="menu-target">
-  <form action="/sdg-site-armenia/am/search/">
-    <label class="sr-only" for="indicator_search">Որոնում</label>
-    <input type="text" name="q" id="indicator_search" title="Որոնում" /><!--
-    --><button aria-label="Որոնում" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <div class="navbar navbar-default widgets-without-menu">
-        <ul class="nav navbar-nav contrast-switcher"><li class="language-toggle-menu-header">
-            
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">ՀԱՅԵՐԵՆ</span>
-      <span class="language-abbreviation">hy</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/sdg-site-armenia/3/">
-              English
-            </a>
-          </li><li class="language-option-ru">
-            <a href="/sdg-site-armenia/ru/3/">
-              Pусский
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-        </li>
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Միացնել բարձր հակադրություն"
-           aria-label="Միացնել բարձր հակադրություն"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-        </ul>
-      </div>
-    </div>
-
-    <div class="navbar navbar-default menu-without-widgets" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label="Ընտրացանկի փոխարկում Կտտացրեք ընտրացանկը ընդլայնելու կամ փլուզելու համար:"
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Ցանկ</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sdg-site-armenia/am/reporting-status">Հաշվետվության կարգավիճակը</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/am/about">Վերաբերյալ</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/am/guidance">Ուղեցույց</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/am/faq">ՀՏՀ</a>
-</li><li class="language-toggle-menu-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/am/reporting-status">Հաշվետվության կարգավիճակը</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/am/about">Վերաբերյալ</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/am/guidance">Ուղեցույց</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/am/faq">ՀՏՀ</a>
+</li></ul>
     
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/sdg-site-armenia/am/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Որոնում</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Որոնում">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Որոնում" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
@@ -294,16 +217,17 @@ data-event-label="high"
 
   <div class="language-toggle-container">
   
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">ՀԱՅԵՐԵՆ</span>
-      <span class="language-abbreviation">hy</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/sdg-site-armenia/3/">
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      ՀԱՅԵՐԵՆ
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/sdg-site-armenia/3/">
               English
             </a>
-          </li><li class="language-option-ru">
-            <a href="/sdg-site-armenia/ru/3/">
+          </li><li>
+            <a class="dropdown-item" href="/sdg-site-armenia/ru/3/">
               Pусский
             </a>
           </li></ul>
@@ -311,90 +235,51 @@ data-event-label="high"
 </div>
 
 
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Միացնել բարձր հակադրություն"
-           aria-label="Միացնել բարձր հակադրություն"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
+<a title="Միացնել բարձր հակադրություն" aria-label="Միացնել բարձր հակադրություն"
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label="Որոնման փոփոխություն: Սեղմեք ՝ որոնման տողն ընդլայնելու կամ փլուզելու համար:"
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Որոնում</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/sdg-site-armenia/am/search/">
-    <label class="sr-only" for="indicator_search-mobile">Որոնում</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Որոնում" /><!--
-    --><button aria-label="Որոնում" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <ul class="nav navbar-nav menu-target " id="menu"><li class="nav-link ">
-    <a href="/sdg-site-armenia/am/reporting-status">Հաշվետվության կարգավիճակը</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/am/about">Վերաբերյալ</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/am/guidance">Ուղեցույց</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/am/faq">ՀՏՀ</a>
-</li>
-
-</ul>
-
+>A</a>
+                </div>
+            </div>
+        </nav>
     </div>
-
-  </div>
-
 </header>
 <div id="top" tabindex=-1></div>
 
 
 
 
-<div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sdg-site-armenia/am/">Գլխավոր էջ</a></li>
-  <li><a href="/sdg-site-armenia/am/goals">Նպատակները</a></li>
-  
-  
-</ol>
 
+<div class="container">
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/sdg-site-armenia/am/">Գլխավոր էջ</a>
+        </li>
+        <li class="breadcrumb-item" >
+            <a href="/sdg-site-armenia/am/goals">Նպատակները</a>
+        </li>
+        
+        
+    </ol>
+</nav>
   
 </div>
 
 <div class="heading goal-banner goal-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/hy/3.png" alt="Առողջություն և բարեկեցություն - Նպատակը 3" id="goal-3" class="goal-icon-image goal-icon-image-" />
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Նպատակը 3: </span>Ապահովել առողջ կյանք և խթանել բարեկեցություն բոլորի համար՝ անկախ տարիքից
-        </h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/hy/3.png" alt="Առողջություն և բարեկեցություն - Նպատակը 3" id="goal-3" class="goal-icon-image goal-icon-image-" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10">
+                <h1>Ապահովել առողջ կյանք և խթանել բարեկեցություն բոլորի համար՝ անկախ տարիքից</h1>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
@@ -404,28 +289,37 @@ data-event-label="high"
 
 
 
-  <div class="container">
-    <h2>Թիրախները և ցուցանիշները</h2>
+  <div class="container g-0">
+    <h2 class="goal-page-heading">Թիրախները և ցուցանիշները</h2>
 
     
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.1</span>
-        </h3>
-        <span class="target-name">Մինչև 2030թ. կրճատել մայրական մահացության համամասնությունը մինչև 70¬ից ցածր՝ 100 հազար կենդանածնի հաշվով</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.1</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Մինչև 2030թ. կրճատել մայրական մահացության համամասնությունը մինչև 70¬ից ցածր՝ 100 հազար կենդանածնի հաշվով</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.1.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.1.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-1-1">Մայրական մահերը 100 հազար կենդանածնի հաշվով</a></span>
               
@@ -433,10 +327,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -446,16 +338,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -463,12 +350,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.1.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.1.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-1-1-a">Մայրական մահերը 100 000 կենդանածնի հաշվով (միջին եռամյա ցուցանիշ)</a></span>
               
@@ -476,10 +367,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -489,21 +378,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -511,12 +393,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.1.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.1.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-1-2">Հմուտ բժշկական անձնակազմի կողմից ընդունվող ծնունդների համամասնությունը</a></span>
               
@@ -524,10 +410,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -537,38 +421,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.2</span>
-        </h3>
-        <span class="target-name">Մինչև 2030թ. վերջ դնել նորածինների և մինչև 5 տարեկան երեխաների կանխարգելելի մահերին. բոլոր երկրները պետք է նպատակ ունենան նվազեցնել վաղ նորածնային մահացությունը առնվազն մինչև 12¬ից ցածր՝ 1000 կենդանածնի հաշվով, իսկ մինչև 5 տարեկան երեխաների մահացությունը՝ առնվազն մինչև 25¬ի՝ 1000 կենդանածնի հաշվով</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.2</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Մինչև 2030թ. վերջ դնել նորածինների և մինչև 5 տարեկան երեխաների կանխարգելելի մահերին. բոլոր երկրները պետք է նպատակ ունենան նվազեցնել վաղ նորածնային մահացությունը առնվազն մինչև 12¬ից ցածր՝ 1000 կենդանածնի հաշվով, իսկ մինչև 5 տարեկան երեխաների մահացությունը՝ առնվազն մինչև 25¬ի՝ 1000 կենդանածնի հաշվով</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.2.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.2.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-2-1">Մինչև 5 տարեկան երեխաների մահացության ցուցանիշը</a></span>
               
@@ -576,10 +464,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -589,16 +475,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -606,12 +487,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.2.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.2.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-2-2">Նորածնային մահացության ցուցանիշը</a></span>
               
@@ -619,10 +504,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -632,16 +515,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -649,12 +527,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.2.2.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.2.2.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-2-2-a">Մանկական մահացության ցուցանիշը</a></span>
               
@@ -662,10 +544,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -675,43 +555,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.3</span>
-        </h3>
-        <span class="target-name">Մինչև 2030թ. վերջ դնել ՁԻԱՀ¬ի, տուբերկուլյոզի, մալարիայի և անտեսված արևադարձային հիվանդությունների համաճարակներին և պայքարել հեպատիտի, ջրի միջոցով փոխանցվող հիվանդությունների և այլ վարակիչ հիվանդությունների դեմ</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.3</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Մինչև 2030թ. վերջ դնել ՁԻԱՀ¬ի, տուբերկուլյոզի, մալարիայի և անտեսված արևադարձային հիվանդությունների համաճարակներին և պայքարել հեպատիտի, ջրի միջոցով փոխանցվող հիվանդությունների և այլ վարակիչ հիվանդությունների դեմ</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-1">Նոր ՄԻԱՎ վարակների թիվը 1000 չվարակված բնակչի հաշվով ըստ սեռի, տարիքի և բնակչության հիմնական խմբերի</a></span>
               
@@ -719,10 +601,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -732,16 +612,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -749,12 +624,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-1-a">Կրծքով չկերակրող ՄԻԱՎ վարակ ունեցող մայրերից երեխային ՄԻԱՎ-ի փոխանցման ցուցանիշ</a></span>
               
@@ -762,10 +641,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -775,21 +652,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -797,12 +667,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.1.b</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.1.b</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-1-b">Իրենց կարգավիճակի մասին իմացող ՄԻԱՎ-ով ապրող մարդկանց տոկոսը</a></span>
               
@@ -810,10 +684,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -823,21 +695,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -845,12 +710,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.1.c</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.1.c</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-1-c">Իրենց կարգավիճակի մասին իմացող ՄԻԱՎ-ով ապրող մարդկանց տոկոսը, որոնք ստանում են ՀՌՎ բուժում</a></span>
               
@@ -858,10 +727,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -871,21 +738,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -893,12 +753,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.1.d</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.1.d</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-1-d">ՀՌՎ բուժում ստացող ՄԻԱՎ վարակով պացիենտների տոկոսը, որոնք ունեն վիրուսային ծանրաբեռնվածության (ՎԾ) չհայտնաբերվող մակարդակ</a></span>
               
@@ -906,10 +770,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -919,21 +781,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -941,12 +796,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-2">Տուբերկուլյոզի 100.000 մարդու հաշվով նոր դեպքերի թիվը մեկ տարվա ընթացքում</a></span>
               
@@ -954,10 +813,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -967,16 +824,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -984,12 +836,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.2.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.2.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-2-a">Բազմադեղակայուն տուբերկուլյոզով հիավանդացության ցուցանիշ (100 000 բնակչի հաշվով)</a></span>
               
@@ -997,10 +853,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1010,21 +864,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1032,12 +879,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.3</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.3</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-3">Մալարիայի 1000 մարդու հաշվով նոր դեպքերի թիվը մեկ տարվա ընթացքում</a></span>
               
@@ -1045,10 +896,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1058,16 +907,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1075,12 +919,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.3.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.3.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-3-a">Մալարիայի տեղական դեպքերի թիվը մեկ տարվա ընթացքում</a></span>
               
@@ -1088,10 +936,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1101,21 +947,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1123,12 +962,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.4</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.4</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-4">Հեպատիտ Բ¬ով վարակման դեպքերի թիվը 100 հազար բնակչի հաշվով</a></span>
               
@@ -1136,10 +979,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1149,16 +990,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1166,12 +1002,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.4.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.4.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-4-a">0-18 տարեկան  սուր հեպատիտ Բ-ով հիվանդացությունը (100 000 բնակչի հաշվով)</a></span>
               
@@ -1179,10 +1019,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1192,21 +1030,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1214,12 +1045,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.4.b</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.4.b</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-4-b">Հեպատիտ   Բ-ով առանձին կամ համակցված բաղադրիչով 3 դեղաչափ պատվաստումներումների ընդգրկվածություն 95 և ավել ընդգծված բաղադրիչով</a></span>
               
@@ -1227,10 +1062,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1240,21 +1073,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1262,12 +1088,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.5</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.5</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-5">Անտեսված արևադարձային հիվանդությունների դեմ միջամտությունների կարիք ունեցող մարդկանց թիվը</a></span>
               
@@ -1275,10 +1105,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1288,16 +1116,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1305,12 +1128,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.5.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.5.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-5-a">Լեյշմանիոզով հիվանդների թիվ</a></span>
               
@@ -1318,10 +1145,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1331,21 +1156,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1353,12 +1171,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.3.5.b</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.3.5.b</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-3-5-b">Լեյշմանիոզից մահվան դեպքեր</a></span>
               
@@ -1366,10 +1188,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1379,43 +1199,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.4</span>
-        </h3>
-        <span class="target-name">Մինչև 2030թ. մեկ երրորդով կրճատել վաղաժամ մահացությունը ոչ վարակիչ հիվանդություններից՝ կանխարգելման և բուժման միջոցով, և խթանել հոգեկան առողջությունը և բարեկեցությունը</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.4</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Մինչև 2030թ. մեկ երրորդով կրճատել վաղաժամ մահացությունը ոչ վարակիչ հիվանդություններից՝ կանխարգելման և բուժման միջոցով, և խթանել հոգեկան առողջությունը և բարեկեցությունը</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.4.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.4.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-4-1">Սրտանոթային հիվանդություններին, քաղցկեղին, շաքարային դիաբետին կամ շնչուղիների քրոնիկական հիվանդություններին վերագրվող մահացությունների թիվը</a></span>
               
@@ -1423,10 +1245,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1436,16 +1256,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1453,12 +1268,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.4.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.4.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-4-2">Ինքնասպանության հետևանքով մահացության ցուցանիշ</a></span>
               
@@ -1466,10 +1285,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1479,38 +1296,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.5</span>
-        </h3>
-        <span class="target-name">Ուժեղացնել թմրամիջոցների չարաշահման կանխարգելումը և բուժումը, այդ թվում՝ թմրադեղերի չարաշահումը և ոգելից խմիչքների վնասաբեր օգտագործումը</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.5</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Ուժեղացնել թմրամիջոցների չարաշահման կանխարգելումը և բուժումը, այդ թվում՝ թմրադեղերի չարաշահումը և ոգելից խմիչքների վնասաբեր օգտագործումը</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.5.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.5.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-5-1">Թմրամիջոցների օգտագործման հետևանքով առաջացած խանգարումների բուժման միջամտությունների (դեղորայքային բուժում, սոցիալ-հոգեբանական, վերականգնողական և հետբուժական խնամքի ծառայություններ) ընդգրկումը</a></span>
               
@@ -1518,10 +1339,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1531,16 +1350,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1548,12 +1362,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.5.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.5.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-5-1-a">Թմրամոլությամբ տառապող հիվանդների թիվը</a></span>
               
@@ -1561,10 +1379,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1574,21 +1390,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1596,12 +1405,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.5.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.5.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-5-2">Ալկոհոլի վնասաբեր օգտագործումը, որն ըստ ազգային համատեքստի սահմանված է որպես ալկոհոլի սպառում մեկ շնչի հաշվով (15 և ավելի բարձր տարիքի անձանց շրջանում) մեկ օրացուցային տարվա ընթացքում՝ մաքուր սպիրտի լիտրերով</a></span>
               
@@ -1609,10 +1422,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1622,16 +1433,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1639,12 +1445,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.5.2.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.5.2.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-5-2-a">Տնային տնտեսության կողմից  մեկ տարվա ընթացքում սպառված ալկոհոլային խմիչքի ծավալը (մաքուր սպիրտ լիտրով)</a></span>
               
@@ -1652,10 +1462,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1665,43 +1473,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.6</span>
-        </h3>
-        <span class="target-name">Մինչև 2020թ. աշխարհում կիսով չափ կրճատել ճանապարհատրանսպորտային պատահարներից մահերի և վիրավորվելու դեպքերի թիվը</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.6</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Մինչև 2020թ. աշխարհում կիսով չափ կրճատել ճանապարհատրանսպորտային պատահարներից մահերի և վիրավորվելու դեպքերի թիվը</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.6.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.6.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-6-1">Ճանապարհատրանսպորտային պատահարներից մահացության թիվը</a></span>
               
@@ -1709,10 +1519,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1722,38 +1530,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.7</span>
-        </h3>
-        <span class="target-name">Մինչև 2030թ. ապահովել սեռական և վերարտադրողական առողջության պահպանման ծառայությունների համընդհանուր հասանելիություն, այդ թվում՝ ընտանիքի պլանավորման, տեղեկատվության և կրթության, ինչպես նաև վերարտադրողական առողջության ինտեգրումը ազգային ռազմավարություններում և ծրագրերում</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.7</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Մինչև 2030թ. ապահովել սեռական և վերարտադրողական առողջության պահպանման ծառայությունների համընդհանուր հասանելիություն, այդ թվում՝ ընտանիքի պլանավորման, տեղեկատվության և կրթության, ինչպես նաև վերարտադրողական առողջության ինտեգրումը ազգային ռազմավարություններում և ծրագրերում</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.7.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.7.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-7-1">Վերարտադրողական տարիքի (15¬49 տարեկան) կանանց համամասնությունը, որոնց ընտանիքի պլանավորման կարիքները բավարարվում են ժամանակակից մեթոդներով</a></span>
               
@@ -1761,10 +1573,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1774,16 +1584,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1791,12 +1596,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.7.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.7.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-7-2">Դեռահասների (10-14 տարեկան, 15-19 տարեկան) ծնելիությունը տվյալ տարիքային խմբի 1000 կնոջ հաշվով</a></span>
               
@@ -1804,10 +1613,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1817,16 +1624,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1834,12 +1636,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.7.2.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.7.2.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-7-2-a">Դեռահասների (15-17 տարեկան) ծնելիությունը տվյալ տարիքային խմբի 1 000 կնոջ հաշվով</a></span>
               
@@ -1847,10 +1653,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1860,43 +1664,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.8</span>
-        </h3>
-        <span class="target-name">Հասնել առողջապահության համընդհանուր ընդգրկմանը, այդ թվում՝ պաշտպանություն ֆինանսական ռիսկերից, որակյալ էական առողջապահական ծառայությունների հասանելիություն և անվտանգ, արդյունավետ, որակյալ և մատչելի կարևոր դեղորայքի և պատվաստանյութերի հասանելիություն բոլորի համար</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.8</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Հասնել առողջապահության համընդհանուր ընդգրկմանը, այդ թվում՝ պաշտպանություն ֆինանսական ռիսկերից, որակյալ էական առողջապահական ծառայությունների հասանելիություն և անվտանգ, արդյունավետ, որակյալ և մատչելի կարևոր դեղորայքի և պատվաստանյութերի հասանելիություն բոլորի համար</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.8.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.8.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-8-1">Հիմնական առողջապահական ծառայությունների ընդգրկումը (հետագծող միջամտությունների հիման վրա սահմանված հիմնական ծառայությունների միջին ընդգրկումը ներառյալ վերարտադրողական, մայրական, նորածնի և մանկական առողջության, վարակիչ հիվանդությունների, ոչ վարակիչ հիվանդությունների ու ծառայության կարողունակությունն ու մատչելիությունը հանրության և բնակչության ամենախոցելի խավի համար)</a></span>
               
@@ -1904,10 +1710,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1917,16 +1721,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1934,12 +1733,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.8.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.8.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-8-1-a">Որակավորված մասնագետի կողմից նախածննդյան հսկողության և խնամքի ապահովում</a></span>
               
@@ -1947,10 +1750,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -1960,21 +1761,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1982,12 +1776,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.8.1.b</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.8.1.b</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-8-1-b">Հղիության ընթացքում առնվազն մեկ ուլտրաձայնային հետազոտության իրականացում</a></span>
               
@@ -1995,10 +1793,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2008,21 +1804,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2030,12 +1819,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.8.1.c</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.8.1.c</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-8-1-c">Ծննդաբերությունից հետո առաջին երկու օրվա ընթացքում մոր հետծննդյան ստուգում</a></span>
               
@@ -2043,10 +1836,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2056,21 +1847,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2078,12 +1862,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.8.1.d</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.8.1.d</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-8-1-d">Ծննդաբերությունից հետո առաջին երկու օրվա ընթացքում նորածնի ստուգում</a></span>
               
@@ -2091,10 +1879,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2104,21 +1890,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2126,12 +1905,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.8.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.8.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-8-2">Տնային տնտեսության ծախսերից առողջությանը մեծ ծախսեր հատկացնող բնակչության համամասնությունը որպես տնային տնտեսության ընդհանուր ծախսերի կամ եկամտի մասնաբաժին</a></span>
               
@@ -2139,10 +1922,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2152,38 +1933,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.9</span>
-        </h3>
-        <span class="target-name">Մինչև 2030թ. էականորեն կրճատել վտանգավոր քիմիական նյութերի և օդի, ջրի և հողի աղտոտման և թունավորման հետևանքով մահերի և հիվանդությունների թիվը</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.9</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Մինչև 2030թ. էականորեն կրճատել վտանգավոր քիմիական նյութերի և օդի, ջրի և հողի աղտոտման և թունավորման հետևանքով մահերի և հիվանդությունների թիվը</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.9.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.9.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-9-1">Շենքերի ներսում և դրսում օդի աղտոտմանը վերագրվող մահացության ցուցանիշը</a></span>
               
@@ -2191,10 +1976,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2204,16 +1987,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2221,12 +1999,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.9.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.9.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-9-1-a">Գրանցված սոցիալ-կենցաղային թունավորման դեպքերից զոհերի թվաքանակը</a></span>
               
@@ -2234,10 +2016,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2247,21 +2027,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2269,12 +2042,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.9.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.9.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-9-2">Աղտոտված ջրի, անապահով սանիտարական պայմանների ու հիգիենայի իսպառ բացակայության պատճառով մահացությունների թիվը (անապահով «Ջուր և սանիտարահիգիենիկ պայմաններ բոլորի համար» (WASH) ծառայություններին ենթարկված լինելը)</a></span>
               
@@ -2282,10 +2059,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2295,16 +2070,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2312,12 +2082,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.9.3</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.9.3</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-9-3">Ոչ դիտավորյալ թունավորումների պատճառով մահացության թիվը</a></span>
               
@@ -2325,10 +2099,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2338,38 +2110,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.a</span>
-        </h3>
-        <span class="target-name">Ուժեղացնել Առողջապահության համաշխարհային կազմակերպության Ծխախոտի դեմ պայքարի շրջանակային կոնվենցիայի իրականացումը բոլոր երկրներում՝ ըստ անհրաժեշտության</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.a</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Ուժեղացնել Առողջապահության համաշխարհային կազմակերպության Ծխախոտի դեմ պայքարի շրջանակային կոնվենցիայի իրականացումը բոլոր երկրներում՝ ըստ անհրաժեշտության</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.a.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.a.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-a-1">Ներկայումս ծխախոտի օգտագործման ըստ տարիքի ստանդարտացված տարածվածությունը 15 և ավելի բարձր տարիքի անձանց շրջանում</a></span>
               
@@ -2377,10 +2153,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2390,38 +2164,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.b</span>
-        </h3>
-        <span class="target-name">Օժանդակել պատվաստանյութերի և դեղորայքի հետազոտություններին և զարգացմանը վարակիչ և ոչ վարակիչ հիվանդությունների դեմ, որոնցից հիմնականում տուժում են զարգացող երկրները, հասանելի դարձնել մատչելի էական դեղորայքը և պատվաստանյութերը համաձայն Մտավոր սեփականության իրավունքների առևտրային ասպեկտներին վերաբերող (TRIPS) համաձայնագրի և հանրային առողջապահության վերաբերյալ Դոհայի հռչակագրի, որը հաստատում է զարգացող երկրների իրավունքը՝ լիարժեք կերպով օգտագործե¬լու Համաձայնագրի՝ մտավոր սեփականության իրավունքների` առևտրին առնչվող հայեցակետերի մասին դրույթները, որոնք վերաբերում են հանրային առողջության պահպանման ճկուն եղանակներին, և, մասնավորապես, հասանելի դարձնել դեղորայքը բոլորի համար</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.b</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Օժանդակել պատվաստանյութերի և դեղորայքի հետազոտություններին և զարգացմանը վարակիչ և ոչ վարակիչ հիվանդությունների դեմ, որոնցից հիմնականում տուժում են զարգացող երկրները, հասանելի դարձնել մատչելի էական դեղորայքը և պատվաստանյութերը համաձայն Մտավոր սեփականության իրավունքների առևտրային ասպեկտներին վերաբերող (TRIPS) համաձայնագրի և հանրային առողջապահության վերաբերյալ Դոհայի հռչակագրի, որը հաստատում է զարգացող երկրների իրավունքը՝ լիարժեք կերպով օգտագործե¬լու Համաձայնագրի՝ մտավոր սեփականության իրավունքների` առևտրին առնչվող հայեցակետերի մասին դրույթները, որոնք վերաբերում են հանրային առողջության պահպանման ճկուն եղանակներին, և, մասնավորապես, հասանելի դարձնել դեղորայքը բոլորի համար</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.b.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.b.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-b-1">Ազգային ծրագրում ընդգրկված բոլոր պատվաստանյութերով ապահովված թիրախային բնակչության համամասնությունը</a></span>
               
@@ -2429,10 +2207,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2442,16 +2218,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2459,12 +2230,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.b.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.b.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-b-1-a">Պատվաստումներում ընգրվածության ցուցանիշ նպատակային քանակակազմերի շրջանում 1տ</a></span>
               
@@ -2472,10 +2247,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2485,21 +2258,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2507,12 +2273,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.b.1.b</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.b.1.b</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-b-1-b">Պատվաստումներում ընգրվածության ցուցանիշ նպատակային քանակակազմերի շրջանում 2տ</a></span>
               
@@ -2520,10 +2290,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2533,21 +2301,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2555,12 +2316,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.b.1.c</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.b.1.c</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-b-1-c">Պատվաստումներում ընգրվածության ցուցանիշ նպատակային քանակակազմերի շրջանում 7տ</a></span>
               
@@ -2568,10 +2333,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2581,21 +2344,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2603,12 +2359,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.b.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.b.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-b-2">Բժշկական հետազոտությունների և հիմնական առողջապահական ոլորտներին տրամադրվող զարգացմանն ուղղված պաշտոնական ընդհանուր զուտ օգնությունը</a></span>
               
@@ -2616,10 +2376,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2629,16 +2387,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2646,12 +2399,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.b.3</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.b.3</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-b-3">Բժշկական հաստատությունների մասնաբժինը, որոնք մշտապես ունեն անհրաժեշտ և մատչելի դեղորայք</a></span>
               
@@ -2659,10 +2416,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2672,38 +2427,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.c</span>
-        </h3>
-        <span class="target-name">Էականորեն ավելացնել առողջապահության ֆինանսավորումը և բուժանձնակազմի հավաքագրումը, զարգացումը, վերապատրաստումը և պահպանումը զարգացող երկրներում, հատկապես առավել թույլ զարգացած երկրներում և զարգացող փոքր կղզի-պետություններում</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.c</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Էականորեն ավելացնել առողջապահության ֆինանսավորումը և բուժանձնակազմի հավաքագրումը, զարգացումը, վերապատրաստումը և պահպանումը զարգացող երկրներում, հատկապես առավել թույլ զարգացած երկրներում և զարգացող փոքր կղզի-պետություններում</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.c.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.c.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-c-1">Բուժաշխատողների խտություն և բաշխվածություն</a></span>
               
@@ -2711,10 +2470,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2724,16 +2481,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -2741,12 +2493,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.c.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.c.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-c-1-a">10 000 բնակչին ընկնող մասնագիտական գործունեություն իրականացնող մասնագետների թվաքանակի ցուցանիշ</a></span>
               
@@ -2754,10 +2510,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2767,43 +2521,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-ազգային">Ազգային</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Թիրախը</span> 3.d</span>
-        </h3>
-        <span class="target-name">Ուժեղացնել բոլոր երկրների, մասնավորապես զարգացող երկրների՝ վաղ նախազգուշացման, ռիսկերի նվազեցման և ազգային և գլոբալ առողջապահական ռիսկերի կառավարման կարողությունները</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Թիրախը</span> 3.d</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Ուժեղացնել բոլոր երկրների, մասնավորապես զարգացող երկրների՝ վաղ նախազգուշացման, ռիսկերի նվազեցման և ազգային և գլոբալ առողջապահական ռիսկերի կառավարման կարողությունները</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Ցուցանիշ</span> 3.d.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Ցուցանիշ</span> 3.d.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/am/3-d-1">Միջազգային առողջապահական կանոնակարգի (IHR) նկատմամբ կարողություններն ու արտակարգ պատրաստվածությունը</a></span>
               
@@ -2811,10 +2567,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Թեգեր(Tags)">
-    
-        <li>
-        <span class="sr-only">Ուցանիշի կարգավիճակ</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Թեգեր(Tags)"><li class="list-inline-item">
+        <span class="visually-hidden">Ուցանիշի կարգավիճակ</span>
         
 
 
@@ -2824,58 +2578,63 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
-  </div>
-</div>
-
-<footer role="contentinfo">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Կառուցվել է Open SDG օգտագործմամբ</a></li>
-            
-              <li>
-                <a href="/sdg-site-armenia/am/faq">ՀՏՀ</a>
-                
-                </li>
-              <li>
-                <a href="/sdg-site-armenia/am/about/cookies-and-privacy/">Քուկիներ</a>
-                
-                </li>
-              
-            
-            
-            <li><a href="/sdg-site-armenia/am/config">Configuration</a></li>
-            </ul>
-        </div>
-      </div>
     </div>
   </div>
+
+
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Կառուցվել է Open SDG օգտագործմամբ</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/sdg-site-armenia/am/faq">ՀՏՀ</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-site-armenia/am/about/cookies-and-privacy/">Քուկիներ</a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/sdg-site-armenia/am/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -2895,77 +2654,11 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Որոնում';</script>
 
-<script src='/sdg-site-armenia/assets/js/sdg.js?v=20220324172427'></script>
+<script src='/sdg-site-armenia/assets/js/sdg.js?v=20220324175816'></script>
 
 <script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: '',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
 
 

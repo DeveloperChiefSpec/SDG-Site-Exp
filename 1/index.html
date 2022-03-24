@@ -130,10 +130,13 @@ var translations = {
 
 
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-armenia/assets/css/style.css?v=20220324172427">
+        <link rel="stylesheet" href="/sdg-site-armenia/assets/css/style.css?v=20220324175816">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -148,145 +151,65 @@ var translations = {
 
     </head>
 <body class="language-en
-layout-goal-with-progress
+layout-goal-bootstrap5
 ">
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="visually-hidden-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  <div class="container">
+    
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
     
     This is a development website. We welcome your <a href="mailto:test@example.com">feedback</a>.
+    
   </div>
 </div>
 
 </div>
 
-<header role="banner" class="header-menu-left-aligned">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-site-armenia/" id="home">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/sdg-site-armenia/" id="home">
     <img src="/sdg-site-armenia/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
 </a>
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Enable high contrast"
-           aria-label="Enable high contrast"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
-      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-hy">
-            <a href="/sdg-site-armenia/am/1/">
-              ՀԱՅԵՐԵՆ
-            </a>
-          </li><li class="language-option-ru">
-            <a href="/sdg-site-armenia/ru/1/">
-              Pусский
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
-    </div>
-
-    <div class="search-and-desktop-widgets">
-      <div id="search" class="menu-target">
-  <form action="/sdg-site-armenia/search/">
-    <label class="sr-only" for="indicator_search">Search</label>
-    <input type="text" name="q" id="indicator_search" title="Search" /><!--
-    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <div class="navbar navbar-default widgets-without-menu">
-        <ul class="nav navbar-nav contrast-switcher"><li class="language-toggle-menu-header">
-            
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
-      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-hy">
-            <a href="/sdg-site-armenia/am/1/">
-              ՀԱՅԵՐԵՆ
-            </a>
-          </li><li class="language-option-ru">
-            <a href="/sdg-site-armenia/ru/1/">
-              Pусский
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-        </li>
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Enable high contrast"
-           aria-label="Enable high contrast"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-        </ul>
-      </div>
-    </div>
-
-    <div class="navbar navbar-default menu-without-widgets" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label="Menu toggle. Click to expand or collapse the menu."
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sdg-site-armenia/reporting-status">Reporting Status</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/about">About</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/guidance">Guidance</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/faq">FAQ</a>
-</li><li class="language-toggle-menu-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/reporting-status">Reporting Status</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/about">About</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/guidance">Guidance</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/faq">FAQ</a>
+</li></ul>
     
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/sdg-site-armenia/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
@@ -294,16 +217,17 @@ data-event-label="high"
 
   <div class="language-toggle-container">
   
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
-      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-hy">
-            <a href="/sdg-site-armenia/am/1/">
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      English
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/sdg-site-armenia/am/1/">
               ՀԱՅԵՐԵՆ
             </a>
-          </li><li class="language-option-ru">
-            <a href="/sdg-site-armenia/ru/1/">
+          </li><li>
+            <a class="dropdown-item" href="/sdg-site-armenia/ru/1/">
               Pусский
             </a>
           </li></ul>
@@ -311,90 +235,51 @@ data-event-label="high"
 </div>
 
 
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Enable high contrast"
-           aria-label="Enable high contrast"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
+<a title="Enable high contrast" aria-label="Enable high contrast"
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label="Search toggle. Click to expand or collapse the search bar."
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Search</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/sdg-site-armenia/search/">
-    <label class="sr-only" for="indicator_search-mobile">Search</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
-    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <ul class="nav navbar-nav menu-target " id="menu"><li class="nav-link ">
-    <a href="/sdg-site-armenia/reporting-status">Reporting Status</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/about">About</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/guidance">Guidance</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/faq">FAQ</a>
-</li>
-
-</ul>
-
+>A</a>
+                </div>
+            </div>
+        </nav>
     </div>
-
-  </div>
-
 </header>
 <div id="top" tabindex=-1></div>
 
 
 
 
-<div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sdg-site-armenia/">Home</a></li>
-  <li><a href="/sdg-site-armenia/goals">Goals</a></li>
-  
-  
-</ol>
 
+<div class="container">
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/sdg-site-armenia/">Home</a>
+        </li>
+        <li class="breadcrumb-item" >
+            <a href="/sdg-site-armenia/goals">Goals</a>
+        </li>
+        
+        
+    </ol>
+</nav>
   
 </div>
 
 <div class="heading goal-banner goal-1">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/1.png" alt="No poverty - Goal 1" id="goal-1" class="goal-icon-image goal-icon-image-" />
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Goal 1: </span>End poverty in all its forms everywhere
-        </h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/1.png" alt="No poverty - Goal 1" id="goal-1" class="goal-icon-image goal-icon-image-" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10">
+                <h1>End poverty in all its forms everywhere</h1>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
@@ -404,28 +289,37 @@ data-event-label="high"
 
 
 
-  <div class="container">
-    <h2>Targets and indicators</h2>
+  <div class="container g-0">
+    <h2 class="goal-page-heading">Targets and indicators</h2>
 
     
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Target</span> 1.1</span>
-        </h3>
-        <span class="target-name">By 2030, eradicate extreme poverty for all people everywhere, currently measured as people living on less than $1.25 a day</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.1</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, eradicate extreme poverty for all people everywhere, currently measured as people living on less than $1.25 a day</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.1.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.1.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-1-1">Proportion of the population living below the international poverty line by sex, age, employment status and geographic location (urban/rural)</a></span>
               
@@ -433,10 +327,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -446,38 +338,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Target</span> 1.2</span>
-        </h3>
-        <span class="target-name">By 2030, reduce at least by half the proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.2</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, reduce at least by half the proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.2.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.2.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-2-1">Proportion of population living below the national poverty line, by sex and age</a></span>
               
@@ -485,10 +381,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -498,16 +392,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -515,12 +404,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.2.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.2.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-2-2">Proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions</a></span>
               
@@ -528,10 +421,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -541,38 +432,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Target</span> 1.3</span>
-        </h3>
-        <span class="target-name">Implement nationally appropriate social protection systems and measures for all, including floors, and by 2030 achieve substantial coverage of the poor and the vulnerable</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.3</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Implement nationally appropriate social protection systems and measures for all, including floors, and by 2030 achieve substantial coverage of the poor and the vulnerable</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1">Proportion of population covered by social protection floors/systems, by sex, distinguishing children, unemployed persons, older persons, persons with disabilities, pregnant women, newborns, work-injury victims and the poor and the vulnerable</a></span>
               
@@ -580,10 +475,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -593,16 +486,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -610,12 +498,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-a">Proportion of registered disabled people to the total number of population at the end of the year</a></span>
               
@@ -623,10 +515,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -636,21 +526,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -658,12 +541,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.b</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.b</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-b">Children with disabilities from diseases (aged 0-17 years)</a></span>
               
@@ -671,10 +558,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -684,21 +569,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -706,12 +584,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.c</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.c</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-c">Proportion of pensioners to the total number of population at the end of the year</a></span>
               
@@ -719,10 +601,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -732,21 +612,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -754,12 +627,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.d</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.d</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-d">Ratio of elderly pensioners. Ratio of age pensioners and the retirement age stipulated by law and aged population</a></span>
               
@@ -767,10 +644,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -780,21 +655,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -802,12 +670,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.e</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.e</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-e">Proportion of families receiving family benefits to households</a></span>
               
@@ -815,10 +687,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -828,21 +698,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -850,12 +713,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.f</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.f</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-f">Proportion of families receiving social benefits to households</a></span>
               
@@ -863,10 +730,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -876,21 +741,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -898,12 +756,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.g</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.g</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-g">Proportion of beneficiaries of old age, disability and in case of losing a breadwinner to the total number of population at the end of the year</a></span>
               
@@ -911,10 +773,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -924,21 +784,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -946,12 +799,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.h</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.h</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-h">Children of orphans (aged 0-17 years) at the end of the year</a></span>
               
@@ -959,10 +816,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -972,21 +827,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -994,12 +842,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.i</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.i</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-i">Children who return to relatives from orphanages (aged 0-17 years)</a></span>
               
@@ -1007,10 +859,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1020,21 +870,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1042,12 +885,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.ja</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.ja</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-ja">Adopted children (aged 0-17 years)</a></span>
               
@@ -1055,10 +902,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1068,21 +913,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1090,12 +928,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.jb</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.jb</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-jb">Adopted children by social groups (aged 0-17 years)</a></span>
               
@@ -1103,10 +945,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1116,21 +956,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1138,12 +971,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.jc</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.jc</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-jc">Number of beneficiaries receiving maternity benefits granted to non-employed person at the end of the year</a></span>
               
@@ -1151,10 +988,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1164,21 +999,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1186,12 +1014,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.j</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.j</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-j">Children with disabilities living in orphanages (aged 0-17 years) at the end of the year</a></span>
               
@@ -1199,10 +1031,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1212,21 +1042,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1234,12 +1057,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.ka</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.ka</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-ka">Share of poor population who receive family benefit</a></span>
               
@@ -1247,10 +1074,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1260,21 +1085,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1282,12 +1100,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.3.1.kb</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.3.1.kb</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-3-1-kb">Share of poor population who receive social assistance, including family benefit</a></span>
               
@@ -1295,10 +1117,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1308,43 +1128,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-national">National</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Target</span> 1.4</span>
-        </h3>
-        <span class="target-name">By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.4</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.4.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.4.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-4-1">Proportion of population living in households with access to basic services</a></span>
               
@@ -1352,10 +1174,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1365,16 +1185,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1382,12 +1197,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.4.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.4.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-4-2">Proportion of total adult population with secure tenure rights to land, (a) with legally recognized documentation, and (b) who perceive their rights to land as secure, by sex and type of tenure</a></span>
               
@@ -1395,10 +1214,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1408,38 +1225,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Target</span> 1.5</span>
-        </h3>
-        <span class="target-name">By 2030, build the resilience of the poor and those in vulnerable situations and reduce their exposure and vulnerability to climate-related extreme events and other economic, social and environmental shocks and disasters</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.5</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, build the resilience of the poor and those in vulnerable situations and reduce their exposure and vulnerability to climate-related extreme events and other economic, social and environmental shocks and disasters</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.5.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.5.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-5-1">Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population</a></span>
               
@@ -1447,10 +1268,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1460,16 +1279,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1477,12 +1291,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.5.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.5.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-5-2">Direct economic loss attributed to disasters in relation to global gross domestic product (GDP)</a></span>
               
@@ -1490,10 +1308,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1503,16 +1319,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1520,12 +1331,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.5.3</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.5.3</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-5-3">Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015–2030</a></span>
               
@@ -1533,10 +1348,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1546,16 +1359,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1563,12 +1371,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.5.4</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.5.4</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-5-4">Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies</a></span>
               
@@ -1576,10 +1388,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1589,38 +1399,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Target</span> 1.a</span>
-        </h3>
-        <span class="target-name">Ensure significant mobilization of resources from a variety of sources, including through enhanced development cooperation, in order to provide adequate and predictable means for developing countries, in particular least developed countries, to implement programmes and policies to end poverty in all its dimensions</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.a</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Ensure significant mobilization of resources from a variety of sources, including through enhanced development cooperation, in order to provide adequate and predictable means for developing countries, in particular least developed countries, to implement programmes and policies to end poverty in all its dimensions</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.a.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.a.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-a-1">Total official development assistance grants from all donors that focus on poverty reduction as a share of the recipient country’s gross national income</a></span>
               
@@ -1628,10 +1442,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1641,16 +1453,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1658,12 +1465,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.a.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.a.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-a-2">Proportion of total government spending on essential services (education, health and social protection)</a></span>
               
@@ -1671,10 +1482,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1684,16 +1493,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1701,12 +1505,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.a.3</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.a.3</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-a-3">Sum of total grants and non-debt-creating inflows directly allocated to poverty reduction programmes as a proportion of GDP</a></span>
               
@@ -1714,10 +1522,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1727,38 +1533,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Target</span> 1.b</span>
-        </h3>
-        <span class="target-name">Create sound policy frameworks at the national, regional and international levels, based on pro-poor and gender-sensitive development strategies, to support accelerated investment in poverty eradication actions</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 1.b</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Create sound policy frameworks at the national, regional and international levels, based on pro-poor and gender-sensitive development strategies, to support accelerated investment in poverty eradication actions</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Indicator</span> 1.b.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 1.b.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/1-b-1">Pro-poor public social spending</a></span>
               
@@ -1766,10 +1576,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Tags">
-    
-        <li>
-        <span class="sr-only">Indicator status</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
         
 
 
@@ -1779,58 +1587,63 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
-  </div>
-</div>
-
-<footer role="contentinfo">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Built using Open SDG</a></li>
-            
-              <li>
-                <a href="/sdg-site-armenia/faq">FAQ</a>
-                
-                </li>
-              <li>
-                <a href="/sdg-site-armenia/about/cookies-and-privacy/">Cookies</a>
-                
-                </li>
-              
-            
-            
-            <li><a href="/sdg-site-armenia/config">Configuration</a></li>
-            </ul>
-        </div>
-      </div>
     </div>
   </div>
+
+
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/sdg-site-armenia/faq">FAQ</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-site-armenia/about/cookies-and-privacy/">Cookies</a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/sdg-site-armenia/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -1850,77 +1663,11 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-site-armenia/assets/js/sdg.js?v=20220324172427'></script>
+<script src='/sdg-site-armenia/assets/js/sdg.js?v=20220324175816'></script>
 
 <script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: '',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
 
 

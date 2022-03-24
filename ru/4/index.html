@@ -130,10 +130,13 @@ var translations = {
 
 
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-site-armenia/assets/css/style.css?v=20220324172427">
+        <link rel="stylesheet" href="/sdg-site-armenia/assets/css/style.css?v=20220324175816">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -148,145 +151,65 @@ var translations = {
 
     </head>
 <body class="language-ru
-layout-goal-with-progress
+layout-goal-bootstrap5
 ">
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Альфа","default_contrast":"стандартный контраст","disable_high_contrast":"Отключить высокую контрастность","disclaimer":"Это сайт находится в разработке. Мы рады вашим отзывам.","enable_high_contrast":"Включить высокую контрастность","high_contrast":"высокий контраст","skip_link":"Перейти к главному содержанию","tag_line":"17 Целей, чтобы преобразовать наш мир","toggle_menu":"Переключайте меню. Нажмите, чтобы развернуть или свернуть меню.","toggle_search":"Поисковая переключатель. Нажмите, чтобы развернуть или свернуть панель поиска."};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
+<a class="visually-hidden-focusable" id="skiplink" href="#main-content" tabindex="0">Перейти к главному содержанию</a>
 <div id="disclaimer">
-  <div class="container">
+    
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Альфа</strong>
     
     Это сайт находится в разработке. Мы рады вашим отзывам.
+    
   </div>
 </div>
 
 </div>
 
-<header role="banner" class="header-menu-left-aligned">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-site-armenia/ru/" id="home">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/sdg-site-armenia/ru/" id="home">
     <img src="/sdg-site-armenia/assets/img/SDG_logo.png" alt="Цели в области устойчивого развития - 17 Целей, чтобы преобразовать наш мир" />
 </a>
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Включить высокую контрастность"
-           aria-label="Включить высокую контрастность"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
-      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/sdg-site-armenia/4/">
-              English
-            </a>
-          </li><li class="language-option-hy">
-            <a href="/sdg-site-armenia/am/4/">
-              ՀԱՅԵՐԵՆ
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
-    </div>
-
-    <div class="search-and-desktop-widgets">
-      <div id="search" class="menu-target">
-  <form action="/sdg-site-armenia/ru/search/">
-    <label class="sr-only" for="indicator_search">Поиск</label>
-    <input type="text" name="q" id="indicator_search" title="Поиск" /><!--
-    --><button aria-label="Поиск" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <div class="navbar navbar-default widgets-without-menu">
-        <ul class="nav navbar-nav contrast-switcher"><li class="language-toggle-menu-header">
-            
-
-
-
-
-
-  <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
-      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/sdg-site-armenia/4/">
-              English
-            </a>
-          </li><li class="language-option-hy">
-            <a href="/sdg-site-armenia/am/4/">
-              ՀԱՅԵՐԵՆ
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-
-
-        </li>
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Включить высокую контрастность"
-           aria-label="Включить высокую контрастность"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-        </ul>
-      </div>
-    </div>
-
-    <div class="navbar navbar-default menu-without-widgets" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label="Переключайте меню. Нажмите, чтобы развернуть или свернуть меню."
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Меню</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sdg-site-armenia/ru/reporting-status">Состояние отчётности</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/ru/about">О нас</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/ru/guidance">Руководство</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/ru/faq">Часто задаваемые вопросы</a>
-</li><li class="language-toggle-menu-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/ru/reporting-status">Состояние отчётности</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/ru/about">О нас</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/ru/guidance">Руководство</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-site-armenia/ru/faq">Часто задаваемые вопросы</a>
+</li></ul>
     
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/sdg-site-armenia/ru/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Поиск</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Поиск">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Поиск" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
@@ -294,16 +217,17 @@ data-event-label="high"
 
   <div class="language-toggle-container">
   
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Pусский</span>
-      <span class="language-abbreviation">ru</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/sdg-site-armenia/4/">
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Pусский
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/sdg-site-armenia/4/">
               English
             </a>
-          </li><li class="language-option-hy">
-            <a href="/sdg-site-armenia/am/4/">
+          </li><li>
+            <a class="dropdown-item" href="/sdg-site-armenia/am/4/">
               ՀԱՅԵՐԵՆ
             </a>
           </li></ul>
@@ -311,90 +235,51 @@ data-event-label="high"
 </div>
 
 
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title="Включить высокую контрастность"
-           aria-label="Включить высокую контрастность"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
+<a title="Включить высокую контрастность" aria-label="Включить высокую контрастность"
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label="Поисковая переключатель. Нажмите, чтобы развернуть или свернуть панель поиска."
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Поиск</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/sdg-site-armenia/ru/search/">
-    <label class="sr-only" for="indicator_search-mobile">Поиск</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Поиск" /><!--
-    --><button aria-label="Поиск" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <ul class="nav navbar-nav menu-target " id="menu"><li class="nav-link ">
-    <a href="/sdg-site-armenia/ru/reporting-status">Состояние отчётности</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/ru/about">О нас</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/ru/guidance">Руководство</a>
-</li><li class="nav-link ">
-    <a href="/sdg-site-armenia/ru/faq">Часто задаваемые вопросы</a>
-</li>
-
-</ul>
-
+>A</a>
+                </div>
+            </div>
+        </nav>
     </div>
-
-  </div>
-
 </header>
 <div id="top" tabindex=-1></div>
 
 
 
 
-<div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sdg-site-armenia/ru/">Главная</a></li>
-  <li><a href="/sdg-site-armenia/ru/goals">Цели</a></li>
-  
-  
-</ol>
 
+<div class="container">
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/sdg-site-armenia/ru/">Главная</a>
+        </li>
+        <li class="breadcrumb-item" >
+            <a href="/sdg-site-armenia/ru/goals">Цели</a>
+        </li>
+        
+        
+    </ol>
+</nav>
   
 </div>
 
 <div class="heading goal-banner goal-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/ru/4.png" alt="Качественное образование - Цель 4" id="goal-4" class="goal-icon-image goal-icon-image-" />
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Цель 4: </span>Обеспечение всеохватного и справедливого качественного образования и поощрение возможности обучения на протяжении всей жизни для всех
-        </h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 goal-tiles">
+                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/ru/4.png" alt="Качественное образование - Цель 4" id="goal-4" class="goal-icon-image goal-icon-image-" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10">
+                <h1>Обеспечение всеохватного и справедливого качественного образования и поощрение возможности обучения на протяжении всей жизни для всех</h1>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
@@ -404,28 +289,37 @@ data-event-label="high"
 
 
 
-  <div class="container">
-    <h2>Цели и индикаторы</h2>
+  <div class="container g-0">
+    <h2 class="goal-page-heading">Цели и индикаторы</h2>
 
     
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.1</span>
-        </h3>
-        <span class="target-name">К 2030 году обеспечить, чтобы все девочки и мальчики завершали получение бесплатного, равноправного и качественного начального и среднего образования, позволяющего добиться востребованных и эффективных результатов обучения</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.1</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить, чтобы все девочки и мальчики завершали получение бесплатного, равноправного и качественного начального и среднего образования, позволяющего добиться востребованных и эффективных результатов обучения</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.1.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.1.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-1-1">Доля детей и молодежи, приходящаяся на a) учащихся 2 и 3 классов; b) выпускников начальной школы; и c) выпускников неполной средней школы, которые достигли по меньшей мере минимального уровня владения навыками i) чтения и ii) математики, в разбивке по полу</a></span>
               
@@ -433,10 +327,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -446,16 +338,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -463,12 +350,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.1.1b</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.1.1b</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-1-1b">Доля детей в конце начальной школы, достигающих, по крайней мере, минимального уровня владения (i) чтением и (ii) математикой</a></span>
               
@@ -476,10 +367,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -489,21 +378,14 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-национальный">национальный</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -511,12 +393,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.1.1c</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.1.1c</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-1-1c">Доля детей в конце младших классов средней школы, достигших, по крайней мере, минимального уровня владения (i) чтением и (ii) математикой</a></span>
               
@@ -524,10 +410,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -537,43 +421,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-национальный">национальный</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.2</span>
-        </h3>
-        <span class="target-name">К 2030 году обеспечить всем девочкам и мальчикам доступ к качественным системам развития, ухода и дошкольного обучения детей младшего возраста, с тем чтобы они были готовы к получению начального образования</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.2</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить всем девочкам и мальчикам доступ к качественным системам развития, ухода и дошкольного обучения детей младшего возраста, с тем чтобы они были готовы к получению начального образования</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.2.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.2.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-2-1">Доля детей в возрасте от 24 до 59 месяцев, развивающихся без отклонений в плане здоровья, обучения и психосоциального благополучия, в разбивке по полу</a></span>
               
@@ -581,10 +467,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -594,16 +478,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -611,12 +490,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.2.2</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.2.2</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-2-2">Уровень участия в организованных видах обучения (за один год до достижения официального возраста поступления в школу) в разбивке по полу</a></span>
               
@@ -624,10 +507,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -637,16 +518,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -654,12 +530,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.2.2.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.2.2.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-2-2-a">Валовая численность детей в возрасте от 3-5 лет в дошкольном образовании</a></span>
               
@@ -667,10 +547,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -680,43 +558,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-национальный">национальный</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.3</span>
-        </h3>
-        <span class="target-name">К 2030 году обеспечить для всех женщин и мужчин равный доступ к недорогому и качественному профессионально-техническому и высшему образованию, в том числе университетскому образованию</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.3</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить для всех женщин и мужчин равный доступ к недорогому и качественному профессионально-техническому и высшему образованию, в том числе университетскому образованию</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.3.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.3.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-3-1">Уровень участия молодых и взрослых людей в формальных и неформальных видах обучения и профессиональной подготовки в последние 12 месяцев в разбивке по полу</a></span>
               
@@ -724,10 +604,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -737,16 +615,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -754,12 +627,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.3.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.3.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-3-1-a">Валовой коэффициент охвата образованием в общем образовании</a></span>
               
@@ -767,10 +644,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -780,43 +655,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-национальный">национальный</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.4</span>
-        </h3>
-        <span class="target-name">К 2030 году существенно увеличить число молодых и взрослых людей, обладающих востребованными навыками, в том числе профессионально-техническими навыками, для трудоустройства, получения достойной работы и занятий предпринимательской деятельностью</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.4</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году существенно увеличить число молодых и взрослых людей, обладающих востребованными навыками, в том числе профессионально-техническими навыками, для трудоустройства, получения достойной работы и занятий предпринимательской деятельностью</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.4.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.4.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-4-1">Доля молодых и взрослых людей, обладающих навыками в области информационно-коммуникационных технологий, в разбивке по видам навыков</a></span>
               
@@ -824,10 +701,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -837,16 +712,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -854,12 +724,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.4.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.4.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-4-1-a">Число учеников на компьютер в общеобразовательных школах.</a></span>
               
@@ -867,10 +741,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -880,43 +752,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-национальный">национальный</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.5</span>
-        </h3>
-        <span class="target-name">К 2030 году ликвидировать гендерное неравенство в сфере образования и обеспечить равный доступ к образованию и профессионально-технической подготовке всех уровней для уязвимых групп населения, в том числе инвалидов, представителей коренных народов и детей, находящихся в уязвимом положении</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.5</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году ликвидировать гендерное неравенство в сфере образования и обеспечить равный доступ к образованию и профессионально-технической подготовке всех уровней для уязвимых групп населения, в том числе инвалидов, представителей коренных народов и детей, находящихся в уязвимом положении</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.5.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.5.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-5-1">Индексы равенства (женщин и мужчин, городских и сельских жителей, нижней и верхней квинтили достатка и других групп, например инвалидов, коренных народов и людей, затронутых конфликтами, в зависимости от наличия данных) по всем касающимся образования показателям в настоящем перечне, которые могут быть дезагрегированы</a></span>
               
@@ -924,10 +798,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -937,16 +809,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -954,12 +821,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.5.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.5.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-5-1-a">Индекс гендерного паритета</a></span>
               
@@ -967,10 +838,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -980,43 +849,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-национальный">национальный</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.6</span>
-        </h3>
-        <span class="target-name">К 2030 году обеспечить, чтобы все молодые люди и значительная доля взрослого населения, как мужчин, так и женщин, умели читать, писать и считать</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.6</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить, чтобы все молодые люди и значительная доля взрослого населения, как мужчин, так и женщин, умели читать, писать и считать</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.6.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.6.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-6-1">Доля населения  в данной возрастной группе, достигшая, по меньшей мере, установленного уровня функциональной способности a) писать и читать и b) считать, в разбивке по полу</a></span>
               
@@ -1024,10 +895,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -1037,16 +906,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1054,12 +918,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.6.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.6.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-6-1-a">Уровень грамотности населения в возрасте от 10-24 лет</a></span>
               
@@ -1067,10 +935,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -1080,43 +946,45 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-национальный">национальный</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.7</span>
-        </h3>
-        <span class="target-name">К 2030 году обеспечить, чтобы все учащиеся приобретали знания и навыки, необходимые для содействия устойчивому развитию, в том числе посредством обучения по вопросам устойчивого развития и устойчивого образа жизни, прав человека, гендерного равенства, пропаганды культуры мира и ненасилия, гражданства мира и осознания ценности культурного разнообразия и вклада культуры в устойчивое развитие</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.7</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году обеспечить, чтобы все учащиеся приобретали знания и навыки, необходимые для содействия устойчивому развитию, в том числе посредством обучения по вопросам устойчивого развития и устойчивого образа жизни, прав человека, гендерного равенства, пропаганды культуры мира и ненасилия, гражданства мира и осознания ценности культурного разнообразия и вклада культуры в устойчивое развитие</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.7.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.7.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-7-1">Статус i) воспитания в духе всемирной гражданственности и ii) пропаганды устойчивого развития, включая гендерное равенство и права человека, на всех уровнях в a) национальной политике в сфере образования; b) учебных программах; c) программах подготовки учителей; и d) системе аттестации учащихся</a></span>
               
@@ -1124,10 +992,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -1137,38 +1003,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.a</span>
-        </h3>
-        <span class="target-name">Создавать и совершенствовать учебные заведения, учитывающие интересы детей, особые нужды инвалидов и гендерные аспекты, и обеспечить безопасную, свободную от насилия и социальных барьеров и эффективную среду обучения для всех</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.a</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Создавать и совершенствовать учебные заведения, учитывающие интересы детей, особые нужды инвалидов и гендерные аспекты, и обеспечить безопасную, свободную от насилия и социальных барьеров и эффективную среду обучения для всех</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.a.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.a.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-a-1">Доля школ, обеспеченных a) электроэнер­гией; b) доступом к Интернету для учебных целей; c) компьютерами для учебных целей; d) адаптиро­ванной инфраструктурой и материалами для учащихся-инвалидов; e) базовыми источниками питьевой воды; f) раздельными минимально оборудованными туалетами; и g) базовыми средствами для мытья рук (согласно определениям показателей инициативы ВССГ)</a></span>
               
@@ -1176,10 +1046,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -1189,38 +1057,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.b</span>
-        </h3>
-        <span class="target-name">К 2020 году значительно увеличить во всем мире количество стипендий, предоставляемых развивающимся странам, особенно наименее развитым странам, малым островным развивающимся государствам и африканским странам, для получения высшего образования, включая профессионально-техническое образование и обучение по вопросам информационно-коммуникационных технологий, технические, инженерные и научные программы, в развитых странах и других развивающихся странах</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.b</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2020 году значительно увеличить во всем мире количество стипендий, предоставляемых развивающимся странам, особенно наименее развитым странам, малым островным развивающимся государствам и африканским странам, для получения высшего образования, включая профессионально-техническое образование и обучение по вопросам информационно-коммуникационных технологий, технические, инженерные и научные программы, в развитых странах и других развивающихся странах</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.b.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.b.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-b-1">Объем официальной помощи в целях развития, направляемой на выплату стипендий, в разбивке по отраслям и видам обучения</a></span>
               
@@ -1228,10 +1100,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -1241,38 +1111,42 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row no-gutters goal-target-and-indicators">
-        <h3 class="goal-target">
-          <span class="target-number"><span class="sr-only">Задача</span> 4.c</span>
-        </h3>
-        <span class="target-name">К 2030 году значительно увеличить число квалифицированных учителей, в том числе посредством международного сотрудничества в подготовке учителей в развивающихся странах, особенно в наименее развитых странах и малых островных развивающихся государствах</span>
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Задача</span> 4.c</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">К 2030 году значительно увеличить число квалифицированных учителей, в том числе посредством международного сотрудничества в подготовке учителей в развивающихся странах, особенно в наименее развитых странах и малых островных развивающихся государствах</span>
+          </div>
+      </div>
         
 
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.c.1</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.c.1</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-c-1">Доля учителей, обладающих минимальными требуемыми квалификациями для преподавания, в разбивке по образовательному уровню учреждения</a></span>
               
@@ -1280,10 +1154,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -1293,16 +1165,11 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
@@ -1310,12 +1177,16 @@ data-event-label="high"
           
           
           
+          
 
-          <div class="goal-indicator clearfix">
-            <div class="goal-with-progress-left">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="indicator-number"><span class="sr-only">Показатель</span> 4.c.1.a</span>
+                <span class="indicator-number"><span class="visually-hidden">Показатель</span> 4.c.1.a</span>
               </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
               <span class="indicator-name"><a href="/sdg-site-armenia/ru/4-c-1-a">Доля подготовленных учителей</a></span>
               
@@ -1323,10 +1194,8 @@ data-event-label="high"
 
 
 
-    <ul class="tags" aria-label="Теги">
-    
-        <li>
-        <span class="sr-only">Состояние индикатора</span>
+    <ul class="tags list-unstyled list-inline" aria-label="Теги"><li class="list-inline-item">
+        <span class="visually-hidden">Состояние индикатора</span>
         
 
 
@@ -1336,63 +1205,66 @@ data-event-label="high"
 </span>
 
 
-        </li>
-    
-    
-        <li>
+        </li><li class="list-inline-item">
         
         <span class="tag tag-национальный">национальный</span>
-        </li>
-    
-    </ul>
+        </li></ul>
 
 
             </div>
-            <div class="goal-with-progress-right">
-              
-            </div>
+            
             
           </div>
         
-      </div>
+        <hr class="goal-page-target-rule" />
     
-  </div>
-</div>
-
-<footer role="contentinfo">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Построен с использованием Open SDG</a></li>
-            
-              <li>
-                <a href="/sdg-site-armenia/ru/faq">Часто задаваемые вопросы</a>
-                
-                </li>
-              <li>
-                <a href="/sdg-site-armenia/ru/about/cookies-and-privacy/">Cookies</a>
-                
-                </li>
-              
-            
-            
-            <li><a href="/sdg-site-armenia/ru/config">Configuration</a></li>
-            </ul>
-        </div>
-      </div>
     </div>
   </div>
+
+
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Построен с использованием Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/sdg-site-armenia/ru/faq">Часто задаваемые вопросы</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-site-armenia/ru/about/cookies-and-privacy/">Cookies</a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/sdg-site-armenia/ru/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -1412,77 +1284,11 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Поиск';</script>
 
-<script src='/sdg-site-armenia/assets/js/sdg.js?v=20220324172427'></script>
+<script src='/sdg-site-armenia/assets/js/sdg.js?v=20220324175816'></script>
 
 <script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: '',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
 
 
