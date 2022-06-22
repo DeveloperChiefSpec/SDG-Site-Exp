@@ -1358,6 +1358,14 @@
           "status": "notstarted"
         },
         {
+          "id": "8-4-2-a",
+          "title": "meta.name-8-4-2-a",
+          "description": "meta.description-8-4-2-a",
+          "keywords": "",
+          "href": "/sdg-site-armenia/8-4-2-a",
+          "status": "complete"
+        },
+        {
           "id": "8-5-1",
           "title": "Average hourly earnings of employees, by sex, age, occupation and persons with disabilities",
           "description": "",
