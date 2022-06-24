@@ -194,7 +194,7 @@ non_global_metadata: indicator.national_metadata
 progress_status:
   status_heading: ''
   status_types: []
-remote_data_prefix: 'https://armstat.github.io/sdg-data-armenia/staging'
+remote_data_prefix: 'https://github.com/DeveloperChiefSpec/SDG-Data-Exp/staging'
 reporting_status:
   title: status.reporting_status
   description: status.description
@@ -209,8 +209,8 @@ reporting_status:
     - value: notstarted
       label: status.exploring_data_sources
       hide_on_goal_pages: false
-repository_url_data: 'https://github.com/armstat/sdg-data-armenia'
-repository_url_site: 'https://github.com/armstat/sdg-site-armenia'
+repository_url_data: 'https://github.com/DeveloperChiefSpec/SDG-Data-Exp'
+repository_url_site: 'https://github.com/DeveloperChiefSpec/SDG-Site-Exp'
 search_index_boost: []
 search_index_extra_fields: []
 series_toggle: true
