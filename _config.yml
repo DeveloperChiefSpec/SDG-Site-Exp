@@ -4,7 +4,7 @@
 remote_theme: open-sdg/open-sdg@1.8.0-beta2
 
 # Replace this title as needed.
-baseurl: "/sdg-site-armenia"
+baseurl: "/SDG-Site-Exp"
 title: general.site_title
 url: ""
 environment: staging
